@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<style type="text/css">
+		.main-div{
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			height: 100vh;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+/*			background-image: url(https://media.istockphoto.com/photos/concept-of-education-or-back-to-school-on-green-background-picture-id494617082?k=6&m=494617082&s=612x612&w=0&h=5GPK50lgZMHQCLqKu_llIOXglXO73i2JKdwHK5UPB80=);*/
+            background-image: linear-gradient(to right,#d6e0f5,#eaeffa);
+		}
+		
+		.container{
+			width: 210px;
+			height: 350px;
+			border-radius: 40px;
+			padding: 20px;
+			box-shadow: 0px 0px 50px darkgrey;
+			margin-right: 600px;
+		}
+		.eq{
+			width: 92px;
+			margin-left: 10px;
+			background-color: orangered;
+		}
+		.op{
+			background-color: orangered;
+			border: none;
+			box-shadow: 0px 0px 2px darkgrey;
+			width: 90%;
+			text-align: right;
+		}
+		.opr{
+			background-color: orange;
+		}
+		input{
+			height: 40px;
+			width: 40px;
+			margin: 4px;
+			border: none;
+			margin-top: 10px;
+			border-radius: 5px;
+			background-color: grey;
+			color: white;
+			font-family: Arial Black;
+			font-size: 15px;
+		}
+		.h1 h1{
+			font-size: 50px;
+			margin-top: -300px;
+			margin-left: 400px;
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="main-div">
+		<div class="h1">	<h1  align="center">Calculator</h1></div>
+		<div class="container" align="center">
+			<form>
+				<div>
+					<input type="text" name="op" disabled class="op">
+				</div>
+				<div>
+					<input type="button" value="c">
+					<input type="button" value="AC" onclick="op.value= '' " />
+					<input type="button" value="/" onclick="op.value=" class="opr"/>
+					<input type="button" value="%" onclick="op.value='' " class="opr"/>
+				</div>
+				<div>
+					<input type="button" value="9" onclick="op.value+='9' ">
+					<input type="button" value="8" onclick="op.value+='8' "/>
+					<input type="button" value="7" onclick="op.value+='7' "/>
+					<input type="button" value="+" onclick="op.value+='+' " class="opr"/>
+				</div>
+				<div>
+					<input type="button" value="6" onclick="op.value+='6' ">
+					<input type="button" value="5" onclick="op.value+='5' "/>
+					<input type="button" value="4" onclick="op.value+='4' "/>
+					<input type="button" value="-" onclick="op.value+='-' " class="opr" />
+					
+				</div>
+				<div>
+					<input type="button" value="3" onclick="op.value+='3' ">
+					<input type="button" value="2" onclick="op.value+='2' "/>
+					<input type="button" value="1" onclick="op.value+='1' "/>
+					<input type="button" value="*" onclick="op.value+='*' " class="opr" />					
+				</div>
+				<div>
+					<input type="button" value="0" onclick="op.value+='0' ">
+					<input type="button" value="." onclick="op.value+='.' "/>
+					<input type="button"class="eq" value="=" onclick="op.value=eval(op.value)" class="opr" />
+					
+				</div>
+			</form>
+			
+		</div>
+		
+	</div>
+
+</body>
+</html>
